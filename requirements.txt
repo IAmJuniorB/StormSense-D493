@@ -1,6 +1,6 @@
 # E: Create a requirements.txt file
 
-#Created using "pip freeze requirements.txt" in command prompt.
+# Created using "pip freeze requirements.txt" in command prompt.
 
 asgiref==3.8.1
 attrs==23.2.0
@@ -29,6 +29,7 @@ openmeteo_requests==1.2.0
 openmeteo_sdk==1.11.4
 packaging==24.0
 pandas==2.2.2
+pillow==10.3.0
 platformdirs==4.2.0
 pluggy==1.5.0
 pytest==8.1.1
@@ -40,6 +41,7 @@ retry-requests==2.0.0
 six==1.16.0
 SQLAlchemy==2.0.29
 sqlparse==0.5.0
+tkhtmlview==0.3.0
 typing_extensions==4.11.0
 tzdata==2024.1
 url-normalize==1.4.3
