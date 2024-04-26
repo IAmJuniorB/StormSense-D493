@@ -1,5 +1,7 @@
 from main import *
 from weather_api import fetch_weather_data
+from flask import send_from_directory
+import os
 
 app = Flask(__name__)
 
@@ -248,3 +250,4 @@ def favicon():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
