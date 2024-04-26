@@ -1,5 +1,4 @@
 from main import *
-from weather_api import fetch_weather_data
 from flask import send_from_directory
 import os
 
