@@ -5,11 +5,10 @@ from sqlalchemy.orm import sessionmaker
 from weather_api import fetch_weather_data
 from flask import Flask
 
-app = Flask(__name__)
-Base = declarative_base()
-
 # C4: Create class that creates a table
 
+
+Base = declarative_base()
 
 class StormSense2(Base):
     """
