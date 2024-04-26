@@ -23,6 +23,7 @@ This project consists of several Python files:
 - `app.py`: Sets up a Flask web application to expose endpoints for retrieving weather data.
 - `tests.py`: Includes unit tests for the main function, weather class, and API functions.
 - `weather.html`: HTML template for displaying weather data analysis results.
+- `gui.py`: A WIP and not needed for the functionality of the application.
 
 ## Usage
 
