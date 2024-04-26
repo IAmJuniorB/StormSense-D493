@@ -1,7 +1,5 @@
-from flask import Flask, jsonify, request
-import requests
-import io
 from main import *
+from weather_api import fetch_weather_data
 
 app = Flask(__name__)
 
@@ -28,6 +26,7 @@ def get_mean_temp(date):
 
     return jsonify(temp_data)
 
+
 @app.route('/wind_speed/<string:date>', methods=['GET'])
 def get_wind_speed(date):
     """
@@ -50,6 +49,7 @@ def get_wind_speed(date):
             wind_speed_data[year] = data.get('daily', {}).get('wind_speed_10m_max')
 
     return jsonify(wind_speed_data)
+
 
 @app.route('/sum_precip/<string:date>', methods=['GET'])
 def get_sum_precip(date):
@@ -74,6 +74,7 @@ def get_sum_precip(date):
 
     return jsonify(sum_precip_data)
 
+
 @app.route('/min_temp/<string:date>', methods=['GET'])
 def get_min_temp(date):
     """
@@ -97,6 +98,7 @@ def get_min_temp(date):
 
     return jsonify(min_temp_data)
 
+
 @app.route('/max_temp/<string:date>', methods=['GET'])
 def get_max_temp(date):
     """
@@ -119,6 +121,7 @@ def get_max_temp(date):
             max_temp_data[year] = data.get('daily', {}).get('temperature_2m_max')
 
     return jsonify(max_temp_data)
+
 
 @app.route('/min_wind/<string:date>', methods=['GET'])
 def get_min_wind(date):
@@ -144,6 +147,7 @@ def get_min_wind(date):
 
     return jsonify(min_wind_data)
 
+
 @app.route('/avg_wind/<string:date>', methods=['GET'])
 def get_avg_wind(date):
     """
@@ -167,6 +171,7 @@ def get_avg_wind(date):
             avg_wind_data[year] = avg_wind_list[0] if avg_wind_list else None
 
     return jsonify(avg_wind_data)
+
 
 @app.route('/max_precip/<string:date>', methods=['GET'])
 def get_max_precip(date):
@@ -192,6 +197,7 @@ def get_max_precip(date):
 
     return jsonify(max_precip_data)
 
+
 @app.route('/min_precip/<string:date>', methods=['GET'])
 def get_min_precip(date):
     """
@@ -216,6 +222,7 @@ def get_min_precip(date):
 
     return jsonify(min_precip_data)
 
+
 @app.route('/')
 def index():
     """
@@ -237,6 +244,7 @@ def favicon():
         file: Favicon image file.
     """
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
