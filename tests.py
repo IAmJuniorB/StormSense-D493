@@ -4,7 +4,9 @@ from main import main
 from weather_class import StormSense2, table_populate, Session
 from weather_api import fetch_weather_data
 
-#D: Create a unit test file
+# D: Create a unit test file
+
+
 class TestMain(unittest.TestCase):
     """
     Test cases for the main function.
@@ -16,6 +18,7 @@ class TestMain(unittest.TestCase):
         """
         main()
         self.assertTrue(mock_print.called)
+
 
 class TestWeatherClass(unittest.TestCase):
     """
@@ -45,6 +48,7 @@ class TestWeatherClass(unittest.TestCase):
         self.session.rollback()
         self.session.close()
 
+
 class TestWeatherAPI(unittest.TestCase):
     """
     Test cases for the fetch_weather_data function.
@@ -62,6 +66,7 @@ class TestWeatherAPI(unittest.TestCase):
         expected_keys = ['daily', 'hourly']
         for key in expected_keys:
             self.assertIn(key, data)
+
 
 if __name__ == '__main__':
     unittest.main()
