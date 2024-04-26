@@ -70,4 +70,4 @@ The `weather.html` file contains an HTML template for displaying weather data an
 
 This project is licensed under the [MIT License](LICENSE).
 
-Feel free to explore and enhance this project further! If you have any questions or suggestions, please reach out to [Your Email]. Happy coding! 🌦️🌬️🌧️
+Feel free to explore and enhance this project further! If you have any questions or suggestions, please reach out to jbonfan@wgu.edu. Happy coding! 🌦️🌬️🌧️
