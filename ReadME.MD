@@ -68,6 +68,6 @@ The `weather.html` file contains an HTML template for displaying weather data an
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License.
 
 Feel free to explore and enhance this project further! If you have any questions or suggestions, please reach out to jbonfan@wgu.edu. Happy coding! 🌦️🌬️🌧️
