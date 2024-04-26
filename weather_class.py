@@ -9,6 +9,7 @@ from weather_api import fetch_weather_data
 
 Base = declarative_base()
 
+
 class StormSense2(Base):
     """
     StormSense2 class represents a table in the database to store weather data.
@@ -85,6 +86,7 @@ class StormSense2(Base):
         self.min_precip = min_precip
         self.max_precip = max_precip
 
+
 engine = create_engine('sqlite:///:memory:', echo=True)
 
 
@@ -151,16 +153,19 @@ for record in results:
           record.avg_wind, record.min_wind, record.max_wind,
           record.sum_precip, record.min_precip, record.max_precip)
 
+
 def print_horizontal_line():
     """
     Prints a horizontal line to separate the output.
     """
     print(
         "+----+------------+--------------+-------+-----+------+-------------------+-------------------+-------------------+--------------------+---------------------+---------------------+-----------------+--------------------+--------------------+")
+    
 
 def print_vertical_keys():
     print(
         "| ID | Latitude   |  Longitude   | Month | Day | Year |  Average Temp (F) |  Minimum Temp (F) |  Maximum Temp (F) | Average Wind (m/s) |  Minimum Wind (m/s) |  Maximum Wind (m/s) | Sum Precip (mm) | Minimum Precip (mm)| Maximum Precip (mm)|")
+
 
 print_horizontal_line()
 print_vertical_keys()
