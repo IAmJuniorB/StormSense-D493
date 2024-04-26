@@ -3,7 +3,6 @@ from sqlalchemy import create_engine, Column, Integer, Float, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from weather_api import fetch_weather_data
-from flask import Flask
 
 # C4: Create class that creates a table
 
