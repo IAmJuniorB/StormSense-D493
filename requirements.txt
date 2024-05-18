@@ -49,4 +49,4 @@ urllib3==2.2.1
 virtualenv==20.26.0
 weather-api==1.0
 weatherapi==0.0.4
-Werkzeug==3.0.2
+Werkzeug==3.0.3
